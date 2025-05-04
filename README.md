@@ -1,70 +1,8 @@
-# PDF RAG System
+ # PDF RAG System
 
 [... installation section ...]
 
 ## Features and Usage
-
-### Basic PDF RAG
-
-The basic RAG system provides simple document querying:
-
-```python
-from pdf_rag import PDFRAGSystem
-
-# Initialize basic RAG
-rag = PDFRAGSystem(
-    pdf_folder="data",
-    index_path="basic_index"
-)
-
-# Create and load index
-rag.create_index()
-rag.load_index()
-
-# Simple query
-question = "What is the main topic of the documents?"
-answer = rag.query(question)
-print(answer)
-```
-
-### Advanced PDF RAG
-
-The advanced system includes enhanced features:
-
-```python
-from pdf_rag import PDFRAGSystem
-
-# Initialize with advanced settings
-system = PDFRAGSystem(
-    pdf_folder="data",
-    index_path="advanced_index",
-    config={
-        "chunk_size": 500,
-        "chunk_overlap": 100,
-        "retriever_k": 8,
-        "score_threshold": 0.7,
-        "temperature": 0.1
-    }
-)
-
-# Create and load index
-system.create_index()
-system.load_index()
-
-# Query with source tracking
-response = system.query(
-    "What are the key findings in the documents?",
-    return_sources=True
-)
-
-# Print answer with sources
-print("\nAnswer:", response["answer"])
-print("\nSources:")
-for source in response["sources"]:
-    print(f"- Document: {source['filename']}")
-    print(f"  Page: {source['page']}")
-    print(f"  Relevance Score: {source['score']:.2f}")
-```
 
 ### Key Features
 
