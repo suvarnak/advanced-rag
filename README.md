@@ -1,4 +1,3 @@
- # PDF RAG System
 # PDF RAG System
 
 ## Installation
