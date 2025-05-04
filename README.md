@@ -1,6 +1,38 @@
  # PDF RAG System
+# PDF RAG System
 
-[... installation section ...]
+## Installation
+
+1. Install uv (Requires Python 3.10+):
+```powershell
+pipx install uv
+```
+
+2. Clone the repository:
+```powershell
+git clone <repository-url>
+cd advanced-rag
+```
+
+3. Create and activate virtual environment using uv:
+```powershell
+uv venv
+.venv\Scripts\activate
+```
+
+4. Install dependencies using uv sync (reads from pyproject.toml):
+```powershell
+uv pip sync pyproject.toml
+```
+
+5. Install and start Ollama:
+- Download from [Ollama's website](https://ollama.ai)
+- Pull the Llama3.2 model:
+```powershell
+ollama pull llama3.2
+```
+
+Note: uv sync ensures exact dependency resolution from pyproject.toml, providing faster and more reliable package installation.
 
 ## Features and Usage
 
